@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teesey Cakes and Events - Crafting Sweet Memories, One Celebration at a Time</title>
+    <meta name="description" content="Premium bakery and event planning service in Lagos. Custom cakes, wedding cakes, event coordination, and celebration desserts. Based in Alimosho, serving all of Lagos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #370a06;
+            --color-accent: #cc581b;
+            --color-bg: #FAEEEA;
+            --color-text: #380C04;
+            --color-surface: #58270c;
+            --color-secondary-accent: #2e5218;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Source Sans 3', sans-serif;
+            --border-radius: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23380C04' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(250, 238, 234, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(56, 12, 4, 0.08);
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 400;
+            transition: color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+            display: block;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -2px 0 10px rgba(56, 12, 4, 0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        section {
+            padding: 80px 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        #hero {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0s;
+        }
+
+        #about {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        #services {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        #testimonials {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        #contact {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.4s;
+        }
+
+        #faq {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
+            margin-top: -70px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            font-family: var(--font-display);
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--color-accent);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(204, 88, 27, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #b54d17;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(204, 88, 27, 0.4);
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(56, 12, 4, 0.12);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 16px rgba(56, 12, 4, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(56, 12, 4, 0.15);
+        }
+
+        .service-card h3 {
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--color-accent);
+            box-shadow: 0 4px 16px rgba(56, 12, 4, 0.08);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--color-primary);
+            font-style: normal;
+        }
+
+        .contact-section {
+            text-align: center;
+            background: #ffffff;
+            padding: 4rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 24px rgba(56, 12, 4, 0.1);
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .contact-item {
+            font-size: 1.1rem;
+        }
+
+        .contact-item strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-primary);
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #25D366;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20BA5A;
+            transform: translateY(-2px);
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 16px rgba(56, 12, 4, 0.08);
+        }
+
+        .faq-item h3 {
+            color: var(--color-primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .faq-item p {
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-surface);
+            color: #ffffff;
+            margin-top: 4rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: #ffffff;
+        }
+
+        @media (max-width: 1024px) {
+            section {
+                padding: 60px 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            section {
+                padding: 48px 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#hero" class="logo">Teesey Cakes and Events</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-bg">
+            <img src="https://images.pexels.com/photos/12889987/pexels-photo-12889987.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Stunning wedding cake">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Teesey Cakes and Events</h1>
+            <p class="tagline">Crafting Sweet Memories, One Celebration at a Time</p>
+            <p>From exquisite custom cakes to full event planning, we bring your sweetest dreams to life. Based in Lagos, serving celebrations across Nigeria with passion, creativity, and attention to every delicious detail.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-section">
+            <div class="about-image">
+                <img src="https://images.pexels.com/photos/29380150/pexels-photo-29380150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Teesey Cakes bakery">
+            </div>
+            <div class="about-content">
+                <h2>Your Trusted Partner for Cakes and Celebrations</h2>
+                <p>Teesey Cakes and Events is a premium bakery and event planning service located in Alimosho, Lagos. We specialize in creating custom cakes that are not just desserts, but edible works of art that capture the essence of your special moments.</p>
+                <p>Whether you're planning a wedding, birthday, corporate event, or any celebration, our experienced team combines culinary expertise with creative event planning to deliver experiences that exceed expectations. From the first consultation to the final detail, we're committed to making your event truly memorable.</p>
+                <p>Our state-of-the-art facility at Pipeline Road, Aboru ensures every cake is baked fresh using premium ingredients, while our event planning services handle everything from décor to coordination, allowing you to simply enjoy your special day.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>What We Offer</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Custom Cakes</h3>
+                <p>Wedding cakes, birthday cakes, anniversary cakes, and celebration cakes designed specifically for your event. Choose from our signature flavors or request something unique. Every cake is handcrafted with premium ingredients and decorated to perfection.</p>
+            </div>
+            <div class="service-card">
+                <h3>Cupcakes & Treats</h3>
+                <p>Individual portions of happiness! Our cupcakes, cake pops, and dessert bars are perfect for parties, corporate events, and gift giving. Available in dozens of flavor combinations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Event Planning</h3>
+                <p>Complete event coordination services including venue decoration, catering arrangements, vendor management, and day-of coordination. We handle the stress so you can focus on celebrating.</p>
+            </div>
+            <div class="service-card">
+                <h3>Corporate Services</h3>
+                <p>Branded cakes and desserts for product launches, conferences, and corporate celebrations. Bulk orders welcome with special pricing for businesses.</p>
+            </div>
+            <div class="service-card">
+                <h3>Delivery Services</h3>
+                <p>Safe, timely delivery across Lagos. We ensure your cake arrives in perfect condition, ready to wow your guests.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Trusted by Lagos Families and Businesses</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"Teesey Cakes made our wedding cake and it was absolutely stunning! Not only did it look amazing, but every guest commented on how delicious it was. They captured our vision perfectly and made the process so easy. Highly recommend!"</p>
+                <p class="testimonial-author">— Funke & Tunde A., Lekki</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"I've ordered birthday cakes for my children from Teesey Cakes for three years running. The quality is always consistent, the designs are creative, and they never disappoint. They're our family's go-to bakery now."</p>
+                <p class="testimonial-author">— Mrs. Adebayo, Ikeja</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"As a corporate events manager, I need reliable vendors I can trust. Teesey Cakes has delivered for multiple company events, always on time and exceeding expectations. Their professionalism and attention to detail are outstanding."</p>
+                <p class="testimonial-author">— Chidi Okafor, Event Coordinator</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"The team at Teesey Cakes didn't just bake a cake, they helped plan my entire baby shower! From decorations to the dessert table setup, everything was perfect. Thank you for making my day stress-free and beautiful!"</p>
+                <p class="testimonial-author">— Blessing M., Aboru</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-section">
+            <h2>Let's Create Something Special Together</h2>
+            <p>Ready to place an order or discuss your upcoming event? We'd love to hear from you!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Visit Our Bakery:</strong>
+                    Blk 8 Plot 28 FSSS, Pipeline Road, Aboru, Iyana Ipaja, Lagos
+                </div>
+                <div class="contact-item">
+                    <strong>Call Us:</strong>
+                    <a href="tel:08060628178">0806 062 8178</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Business Hours:</strong>
+                    Monday - Saturday: 8:00 AM - 6:00 PM<br>
+                    Sunday: By Appointment
+                </div>
+            </div>
+            <p style="margin-top: 2rem;">For custom cake orders, we recommend contacting us at least 2 weeks in advance. For event planning services, reach out 4-6 weeks before your date to ensure availability.</p>
+            <p>WhatsApp us for quick quotes, photos of previous work, or to schedule a consultation. We respond to all inquiries within 24 hours.</p>
+            <a href="https://wa.me/2348060628178" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Common Questions About Our Services</p>
+            
+            <div class="faq-item">
+                <h3>How far in advance should I order my cake?</h3>
+                <p>For custom celebration cakes, we recommend ordering at least 2 weeks in advance. For wedding cakes, please contact us 4-6 weeks before your date. Rush orders may be accommodated depending on our schedule.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you offer delivery?</h3>
+                <p>Yes! We deliver across Lagos, with standard delivery to most areas within Alimosho LGA. Delivery fees vary based on distance and cake size. We ensure your cake arrives safely and on time.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I customize my cake flavor and design?</h3>
+                <p>Absolutely! We work closely with you to create exactly what you envision. Choose from our popular flavors including chocolate, vanilla, red velvet, fruit cake, and more. Share your design ideas, photos, or theme and we'll bring it to life.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What are your payment terms?</h3>
+                <p>We require 50% deposit to confirm your order, with the balance due upon delivery or pickup. We accept cash, bank transfer, and mobile payments.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you cater to dietary restrictions?</h3>
+                <p>Yes, we offer eggless cakes and can accommodate certain dietary needs. Please inform us of any restrictions when placing your order.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What areas do you serve for event planning?</h3>
+                <p>While based in Alimosho, we provide event planning services across Lagos State. Contact us to discuss your event location and requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Teesey Cakes and Events. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/2348060628178" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.213-2.112c2.354 1.288 5.016 1.963 7.787 1.963 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.547 0-5.043-0.713-7.232-2.064l-0.517-0.32-5.368 1.381 1.419-5.283-0.347-0.544c-1.482-2.329-2.267-5.027-2.267-7.837 0-7.895 6.427-14.323 14.323-14.323s14.323 6.427 14.323 14.323c0 7.895-6.427 14.323-14.323 14.323zM22.943 19.616c-0.411-0.205-2.421-1.195-2.795-1.331-0.373-0.137-0.645-0.205-0.917 0.205s-1.053 1.331-1.291 1.603c-0.237 0.272-0.475 0.307-0.885 0.102-0.411-0.205-1.733-0.64-3.301-2.037-1.221-1.088-2.048-2.435-2.285-2.845s-0.025-0.631 0.179-0.835c0.184-0.184 0.411-0.479 0.616-0.719s0.272-0.411 0.411-0.684c0.136-0.
