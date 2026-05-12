@@ -1,0 +1,56 @@
+{
+  "businessName": "Teesey Cakes and Events",
+  "industry": "Bakery & Event Services",
+  "tone": "warm and inviting",
+  "tagline": "Crafting Sweet Memories, One Celebration at a Time",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero Section",
+      "copy": "Welcome to Teesey Cakes and Events\n\nWhere Every Celebration Becomes Unforgettable\n\nFrom exquisite custom cakes to full event planning, we bring your sweetest dreams to life. Based in Lagos, serving celebrations across Nigeria with passion, creativity, and attention to every delicious detail.",
+      "imagePrompt": "A stunning three-tier wedding cake with intricate fondant flowers and gold accents, displayed on an elegant table at a beautifully decorated Nigerian wedding reception, soft natural lighting, vibrant colors of traditional aso-ebi in the background, professional photography, high-end celebration atmosphere",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "Your Trusted Partner for Cakes and Celebrations\n\nTeesey Cakes and Events is a premium bakery and event planning service located in Alimosho, Lagos. We specialize in creating custom cakes that are not just desserts, but edible works of art that capture the essence of your special moments.\n\nWhether you're planning a wedding, birthday, corporate event, or any celebration, our experienced team combines culinary expertise with creative event planning to deliver experiences that exceed expectations. From the first consultation to the final detail, we're committed to making your event truly memorable.\n\nOur state-of-the-art facility at Pipeline Road, Aboru ensures every cake is baked fresh using premium ingredients, while our event planning services handle everything from décor to coordination, allowing you to simply enjoy your special day.",
+      "imagePrompt": "A warm, inviting bakery workspace in Lagos showing professional bakers decorating beautiful cakes, modern equipment, shelves with colorful cake supplies, natural light streaming through windows, African bakers in clean aprons working with concentration and joy, authentic Nigerian bakery setting",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "What We Offer\n\nCustom Cakes\nWedding cakes, birthday cakes, anniversary cakes, and celebration cakes designed specifically for your event. Choose from our signature flavors or request something unique. Every cake is handcrafted with premium ingredients and decorated to perfection.\n\nCupcakes & Treats\nIndividual portions of happiness! Our cupcakes, cake pops, and dessert bars are perfect for parties, corporate events, and gift giving. Available in dozens of flavor combinations.\n\nEvent Planning\nComplete event coordination services including venue decoration, catering arrangements, vendor management, and day-of coordination. We handle the stress so you can focus on celebrating.\n\nCorporate Services\nBranded cakes and desserts for product launches, conferences, and corporate celebrations. Bulk orders welcome with special pricing for businesses.\n\nDelivery Services\nSafe, timely delivery across Lagos. We ensure your cake arrives in perfect condition, ready to wow your guests.",
+      "imagePrompt": "A collage-style image showing various celebration cakes: a multi-tier white wedding cake, colorful birthday cake with candles, elegant corporate event dessert table, beautifully decorated cupcakes, all photographed in Nigerian celebration settings with vibrant decorations, joyful atmosphere, professional food photography",
+      "layout": "grid"
+    },
+    {
+      "id": "testimonials",
+      "name": "What Our Clients Say",
+      "copy": "Trusted by Lagos Families and Businesses\n\n\"Teesey Cakes made our wedding cake and it was absolutely stunning! Not only did it look amazing, but every guest commented on how delicious it was. They captured our vision perfectly and made the process so easy. Highly recommend!\"\n— Funke & Tunde A., Lekki\n\n\"I've ordered birthday cakes for my children from Teesey Cakes for three years running. The quality is always consistent, the designs are creative, and they never disappoint. They're our family's go-to bakery now.\"\n— Mrs. Adebayo, Ikeja\n\n\"As a corporate events manager, I need reliable vendors I can trust. Teesey Cakes has delivered for multiple company events, always on time and exceeding expectations. Their professionalism and attention to detail are outstanding.\"\n— Chidi Okafor, Event Coordinator\n\n\"The team at Teesey Cakes didn't just bake a cake, they helped plan my entire baby shower! From decorations to the dessert table setup, everything was perfect. Thank you for making my day stress-free and beautiful!\"\n— Blessing M., Aboru",
+      "imagePrompt": "Happy Nigerian clients at celebrations holding or standing next to beautiful custom cakes, genuine smiles, diverse age groups from children to adults, traditional and modern Nigerian attire, festive backgrounds with decorations, authentic candid photography capturing joy and satisfaction",
+      "layout": "cards"
+    },
+    {
+      "id": "contact",
+      "name": "Get In Touch",
+      "copy": "Let's Create Something Special Together\n\nReady to place an order or discuss your upcoming event? We'd love to hear from you!\n\nVisit Our Bakery:\nBlk 8 Plot 28 FSSS, Pipeline Road, Aboru, Iyana Ipaja, Lagos\n\nCall Us:\n0806 062 8178\n\nBusiness Hours:\nMonday - Saturday: 8:00 AM - 6:00 PM\nSunday: By Appointment\n\nFor custom cake orders, we recommend contacting us at least 2 weeks in advance. For event planning services, reach out 4-6 weeks before your date to ensure availability.\n\nWhatsApp us for quick quotes, photos of previous work, or to schedule a consultation. We respond to all inquiries within 24 hours.",
+      "imagePrompt": "Professional storefront or workshop of Teesey Cakes showing the business signage, welcoming entrance in Lagos, Pipeline Road area, Nigerian street context, warm inviting lighting, clean modern appearance, approachable and professional atmosphere, daytime photography",
+      "layout": "centered"
+    },
+    {
+      "id": "faq",
+      "name": "Frequently Asked Questions",
+      "copy": "Common Questions About Our Services\n\nHow far in advance should I order my cake?\nFor custom celebration cakes, we recommend ordering at least 2 weeks in advance. For wedding cakes, please contact us 4-6 weeks before your date. Rush orders may be accommodated depending on our schedule.\n\nDo you offer delivery?\nYes! We deliver across Lagos, with standard delivery to most areas within Alimosho LGA. Delivery fees vary based on distance and cake size. We ensure your cake arrives safely and on time.\n\nCan I customize my cake flavor and design?\nAbsolutely! We work closely with you to create exactly what you envision. Choose from our popular flavors including chocolate, vanilla, red velvet, fruit cake, and more. Share your design ideas, photos, or theme and we'll bring it to life.\n\nWhat are your payment terms?\nWe require 50% deposit to confirm your order, with the balance due upon delivery or pickup. We accept cash, bank transfer, and mobile payments.\n\nDo you cater to dietary restrictions?\nYes, we offer eggless cakes and can accommodate certain dietary needs. Please inform us of any restrictions when placing your order.\n\nWhat areas do you serve for event planning?\nWhile based in Alimosho, we provide event planning services across Lagos State. Contact us to discuss your event location and requirements.",
+      "imagePrompt": "A clean, organized consultation scene showing a cake portfolio book or tablet displaying various cake designs, with sample flavor swatches or mini cupcakes on a table, professional consultation setting in a Nigerian bakery, warm lighting, welcoming atmosphere, detailed close-up showing quality and professionalism",
+      "layout": "default"
+    }
+  ],
+  "contact": {
+    "phone": "0806 062 8178",
+    "email": "",
+    "address": "Blk 8 Plot 28 FSSS, Pipeline Road, Aboru, Iyana Ipaja, Lagos",
+    "whatsapp": "https://wa.me/2348060628178"
+  }
+}
